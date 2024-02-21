@@ -1,58 +1,9 @@
-/* eslint-disable @next/next/no-img-element */
 "use client";
-import Image from "next/image";
-import React, { useEffect, useState } from "react";
-
-const useScroll = () => {
-  const [isScrolled, setIsScrolled] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > 0) {
-        setIsScrolled(true);
-      } else {
-        setIsScrolled(false);
-      }
-    };
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
-  return isScrolled;
-};
-
-const Logo = () => (
-  <Image
-    src="/logo.svg"
-    alt="netflix"
-    width={100}
-    height={100}
-    className="cursor-pointer"
-  />
-);
-const NavLinks = () => (
-  <ul className="hidden space-x-4 md:flex">
-    <li className="headerLink">Home</li>
-    <li className="headerLink">TV Shows</li>
-    <li className="headerLink">Movies</li>
-    <li className="headerLink">Latest</li>
-    <li className="headerLink">My List</li>
-  </ul>
-);
-
-const UserProfile = () => (
-  <div className="flex items-center space-x-4 text-sm font-light">
-    <p className="hidden cursor-not-allowed lg:inline">Kids</p>
-    <Image
-      src="/profile.png"
-      alt="profile"
-      width={50}
-      height={50}
-      className="rounded cursor-pointer"
-    />
-  </div>
-);
+import React from "react";
+import { UserProfile } from "./UserProfile";
+import { useScroll } from "../hooks/useScroll";
+import { Logo } from "./Logo";
+import { NavLinks } from "./NavLinks";
 
 export default function Header() {
   const isScrolled = useScroll();
