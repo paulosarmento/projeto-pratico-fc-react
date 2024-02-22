@@ -1,8 +1,8 @@
-import Image from "next/image";
 import { Inter } from "next/font/google";
 import Header from "@/components/Header";
 import { InformationCircleIcon } from "@heroicons/react/24/outline";
 import { PlayIcon } from "@heroicons/react/24/solid";
+import Image from "next/image";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -39,6 +39,23 @@ export default function Home() {
             <InformationCircleIcon className="h-6" />
             More Info
           </button>
+        </div>
+        <div className="flex-col space-y-4">
+          <div className="flex space-x-4 overflow-x-scroll">
+            {[1, 2, 3, 4, 5].map((index) => (
+              <div
+                key={index}
+                className="group h-28 min-w-[200px] relative transform transition duration-200 ease-in  hover:scale-110 "
+              >
+                <Image
+                  src={`/item_${index}.png`}
+                  alt="MAID"
+                  fill={true}
+                  className="rounded"
+                />
+              </div>
+            ))}
+          </div>
         </div>
       </main>
     </div>
