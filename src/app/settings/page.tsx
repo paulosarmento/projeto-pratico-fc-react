@@ -1,5 +1,6 @@
 import React from "react";
 import { getAppSettings } from "../lib/settings";
+import BuggyButton from "../components/BuggyButton";
 
 async function Settings() {
   const { theme, language } = await getAppSettings();
@@ -16,6 +17,9 @@ async function Settings() {
       >
         <p>Theme: {theme}</p>
         <p>Language: {language}</p>
+      </div>
+      <div className="mt-4">
+        <BuggyButton />
       </div>
     </div>
   );
