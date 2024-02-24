@@ -10,7 +10,7 @@ export interface RequestOptions {
   rating_like?: string;
 }
 
-export const defaultRequestOptions: RequestOptions = {
+export const defaultOptions: RequestOptions = {
   page: 1,
   _limit: 10,
 };
@@ -23,27 +23,18 @@ export function buildQueryString(params: ApiQueryParams) {
   return `?${new URLSearchParams(Object.fromEntries(query)).toString()}`;
 }
 
-export async function apiRequest(
+export async function apiRequest<T>(
   endpoint: string,
   query: ApiQueryParams = {},
   options: RequestOptions = {}
-) {
-  const mergeOptions: RequestOptions = {
-    ...defaultRequestOptions,
-    ...options,
-  };
-
-  const queryString: string = buildQueryString({
-    ...query,
-    ...mergeOptions,
-  });
+): Promise<T> {
+  const mergedOptions: RequestOptions = { ...defaultOptions, ...options };
+  const queryString: string = buildQueryString({ ...query, ...mergedOptions });
   try {
-    const response = await fetch(`${API_URL}/${endpoint}`);
-
+    const response = await fetch(`${API_URL}/${endpoint}${queryString}`);
     if (!response.ok) {
-      throw new Error(`API Request failed with status ${response.statusText}`);
+      throw new Error(`API request failed: ${response.statusText}`);
     }
-
     return response.json();
   } catch (error) {
     throw error;
