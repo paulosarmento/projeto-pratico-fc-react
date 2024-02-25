@@ -35,7 +35,7 @@ export default async function SearchResults({ searchParams }: ISearchProps) {
     <div>
       <div className="relative bg-gradient-to-b pb-8">
         <Header />
-        <main className="relative mb-48 mt-20 h-screen pl-4 lg:pl-16">
+        <main className="relative overflow-y-scroll p-8 pb-20 scrollbar-hide lg:px-16">
           <h1 className="text-2xl font-bold mb-4">
             Search Results for: <span className="text-red-500">{title}</span>
           </h1>

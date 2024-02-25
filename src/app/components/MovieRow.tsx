@@ -5,9 +5,10 @@ type MovieRowProps = {
   sectionTitle: string;
   movies: Movies;
 };
+
 export function MovieRow({ sectionTitle, movies }: MovieRowProps) {
   return (
-    <div className="flex-col space-y-2 ">
+    <div className="flex-col space-y-2">
       <div className="flex">
         <h2 className="my-4 inline-flex items-center text-2xl font-bold">
           {sectionTitle}
