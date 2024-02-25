@@ -1105,6 +1105,13 @@
   resolved "https://registry.npmjs.org/@ungap/structured-clone/-/structured-clone-1.2.0.tgz"
   integrity sha512-zuVdFrMJiuCDQUMCzQaD6KL28MjnqqN8XnAqiEq9PNm/hCPTSGfrXCOfwj1ow4LFb/tNymJPwsNbVePc1xFqrQ==
 
+"@vidstack/react@^1.10.9":
+  version "1.10.9"
+  resolved "https://registry.yarnpkg.com/@vidstack/react/-/react-1.10.9.tgz#ad9ee31c85143f55989c93f4a2fb8d60ab7e718e"
+  integrity sha512-xMRhk8T2V/ULmDylYm2+a6F6zDAjXG2lHIUL/oRbERXDV/Ou+ZE+QDxcBFu2aIQ2rQriCyhh3pNpST8f9ePWVw==
+  dependencies:
+    media-captions "^1.0.1"
+
 abab@^2.0.6:
   version "2.0.6"
   resolved "https://registry.npmjs.org/abab/-/abab-2.0.6.tgz"
@@ -3676,6 +3683,11 @@ makeerror@1.0.12:
   dependencies:
     tmpl "1.0.5"
 
+media-captions@^1.0.1:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/media-captions/-/media-captions-1.0.2.tgz#90a6595c3de0859308e996d8b151a1f3bab9e242"
+  integrity sha512-QxAFc+XTGZeMx+ZvLtMxEDgAjd0kr1LJ2NekLr1cw/UKENOxK7B9g6HwtuTQzCXxmb4Dknd4T8M7FOqqCK9buA==
+
 merge-stream@^2.0.0:
   version "2.0.0"
   resolved "https://registry.npmjs.org/merge-stream/-/merge-stream-2.0.0.tgz"
@@ -4543,6 +4555,7 @@ string-length@^4.0.1:
     strip-ansi "^6.0.0"
 
 "string-width-cjs@npm:string-width@^4.2.0", string-width@^4.1.0, string-width@^4.2.0, string-width@^4.2.3:
+  name string-width-cjs
   version "4.2.3"
   resolved "https://registry.npmjs.org/string-width/-/string-width-4.2.3.tgz"
   integrity sha512-wKyQRQpjJ0sIp62ErSZdGsjMJWsap5oRNihHhu6G7JVO/9jIB6UyevL+tXuOqrng8j/cxKTWyWUwvSTriiZz/g==
@@ -5050,6 +5063,7 @@ which@^2.0.1:
     isexe "^2.0.0"
 
 "wrap-ansi-cjs@npm:wrap-ansi@^7.0.0", wrap-ansi@^7.0.0:
+  name wrap-ansi-cjs
   version "7.0.0"
   resolved "https://registry.npmjs.org/wrap-ansi/-/wrap-ansi-7.0.0.tgz"
   integrity sha512-YVGIj2kamLSTxw6NsZjoBxfSwsn0ycdesmc4p+Q21c5zPuZ1pl+NfxVdxPtdHvmNVOQ6XSYG4AUtyt/Fi7D16Q==
