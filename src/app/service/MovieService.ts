@@ -24,7 +24,7 @@ export const searchMovies = async (
   title: string = "",
   genre: string = "",
   options: RequestOptions = {
-    _limit: 10,
+    _limit: 100,
   }
 ): Promise<Movies> => {
   return apiRequest(
