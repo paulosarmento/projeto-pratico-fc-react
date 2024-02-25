@@ -2,9 +2,12 @@ import Header from "@/app/components/Header";
 import { MovieRow } from "./components/MovieRow";
 import { Banner } from "./components/Banner";
 import { getFeaturedMovie, getMoviesByGenre } from "./service/MovieService";
-
+export function getRandomInt(min: number, max: number): number {
+  return Math.floor(Math.random() * (max - min + 1) + min);
+}
 export default async function Home() {
-  const featuredMovie = await getFeaturedMovie("101");
+  const randomMovieId = getRandomInt(101, 106);
+  const featuredMovie = await getFeaturedMovie(String(randomMovieId));
   const genres = ["Drama", "Action", "Comedy", "Animation"];
 
   const movies = await Promise.all(
