@@ -1,11 +1,11 @@
+import Link from "next/link";
 import React from "react";
 
 export const NavLinks = () => (
   <ul className="hidden space-x-4 md:flex">
-    <li className="headerLink">Home</li>
-    <li className="headerLink">TV Shows</li>
-    <li className="headerLink">Movies</li>
-    <li className="headerLink">Latest</li>
-    <li className="headerLink">My List</li>
+    <Link href="/search?genre=Comedy">Comedy</Link>
+    <Link href="/search?genre=Action">Action</Link>
+    <Link href="/search?genre=Animation">Animation</Link>
+    <Link href="/search?genre=Adventure">Adventure</Link>
   </ul>
 );
